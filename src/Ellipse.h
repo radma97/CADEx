@@ -9,8 +9,11 @@ class Ellipse :public ICurve
 {
 private:
 
-	/** Радиус круга */
-	double radius = 1;
+	/** X-полуось эллипса */
+	double radiusX = 1;
+
+	/** Y-полуось эллипса */
+	double radiusY = 1;
 	
 public:
 
@@ -18,16 +21,22 @@ public:
 
 	/**
 	 * Основной конструктор для создания экземпляра класса
-	 * @param r радиус круга
+	 * @param a X-полуось эллипса
+	 * @param b Y-полуось эллипса
 	*/
-	Ellipse(double r)
+	Ellipse(double a, double b)
 	{
-		setRadius(r);
+		setRadiusX(a);
+		setRadiusY(b);
 	}
 
-	double getRadius() const { return radius; }
+	double getRadiusX() const { return radiusX; }
 
-	void setRadius(double r);
+	double getRadiusY() const { return radiusY; }
+
+	void setRadiusX(double a);
+
+	void setRadiusY(double b);
 
 	Point getPoint(double t) const override;
 
