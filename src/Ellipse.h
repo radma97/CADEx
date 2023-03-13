@@ -3,9 +3,9 @@
 #include "ICurve.h"
 
 /**
- * @brief Окружность в плоскости XoY
+ * @brief Эллипс в плоскости XoY
 */
-class Circle :public ICurve
+class Ellipse :public ICurve
 {
 private:
 
@@ -14,13 +14,13 @@ private:
 	
 public:
 
-	Circle() = default;
+	Ellipse() = default;
 
 	/**
 	 * Основной конструктор для создания экземпляра класса
 	 * @param r радиус круга
 	*/
-	Circle(double r)
+	Ellipse(double r)
 	{
 		setRadius(r);
 	}

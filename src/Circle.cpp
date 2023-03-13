@@ -16,10 +16,10 @@ void Circle::setRadius(double r)
 
 Point Circle::getPoint(double t) const
 {
-	return { std::cos(t), std::sin(t), 0. };
+	return { radius * std::cos(t), radius * std::sin(t), 0. };
 }
 
 Vector Circle::getDerivative(double t) const
 {
-	return { -std::sin(t), std::cos(t), 0. };
+	return { -radius * std::sin(t), radius * std::cos(t), 0. };
 }
