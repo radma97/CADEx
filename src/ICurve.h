@@ -6,6 +6,8 @@
 */
 class ICurve
 {
+public:
+
 	virtual ~ICurve() = default;
 	
 	/**
@@ -13,12 +15,12 @@ class ICurve
 	 * @param t значение параметра, при котором вычисляется точка
 	 * @return точка на кривой
 	*/
-	virtual Point getPoint(double t) = 0;
+	virtual Point getPoint(double t) const = 0;
 
 	/**
 	 * @brief Вычисление производной первого порядка в заданной точке
 	 * @param t значение параметра, при котором вычисляется производная
 	 * @return значение производной
 	*/
-	virtual Vector getDerivative(double t) = 0;
+	virtual Vector getDerivative(double t) const = 0;
 };
