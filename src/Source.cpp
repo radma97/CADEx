@@ -45,7 +45,7 @@ int main()
 		elem = generateRandomObject();
 	}
 
-	cout << "Coordinates of point and derivative of curves in first container:" << endl;
+	cout << "The coordinates of point and derivative of curves in first container:" << endl;
 	for (const auto& elem : curves)
 	{
 		cout << (*elem).getPoint(acos(-1.) / 4) << '\t' << (*elem).getDerivative(acos(-1.) / 4) << endl;
@@ -66,6 +66,12 @@ int main()
 		return p1->getRadius() < p2->getRadius();
 	});
 
+	double sumOfRadii = 0;
+	for (const auto& circle : circles)
+	{
+		sumOfRadii += circle->getRadius();
+	}
+	cout << "The sum of the radii of the second container elements = " << sumOfRadii << endl;
 
 
 	return 0;
