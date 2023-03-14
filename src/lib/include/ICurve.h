@@ -1,26 +1,29 @@
 #pragma once
 #include "Point.h"
 
-/**
- * @brief Интерфейс для трёхмерной кривой
-*/
-class ICurve
+namespace Cur3D
 {
-public:
-
-	virtual ~ICurve() = default;
-
 	/**
-	 * @brief Вычисление трёхмерной точки, соответствующей данному значению параметра
-	 * @param t значение параметра, при котором вычисляется точка
-	 * @return точка на кривой
+	 * @brief Интерфейс для трёхмерной кривой
 	*/
-	virtual Point getPoint(double t) const = 0;
+	class ICurve
+	{
+	public:
 
-	/**
-	 * @brief Вычисление производной первого порядка в заданной точке
-	 * @param t значение параметра, при котором вычисляется производная
-	 * @return значение производной
-	*/
-	virtual Vector getDerivative(double t) const = 0;
-};
+		virtual ~ICurve() = default;
+
+		/**
+		 * @brief Вычисление трёхмерной точки, соответствующей данному значению параметра
+		 * @param t значение параметра, при котором вычисляется точка
+		 * @return точка на кривой
+		*/
+		virtual Point getPoint(double t) const = 0;
+
+		/**
+		 * @brief Вычисление производной первого порядка в заданной точке
+		 * @param t значение параметра, при котором вычисляется производная
+		 * @return значение производной
+		*/
+		virtual Vector getDerivative(double t) const = 0;
+	};
+}

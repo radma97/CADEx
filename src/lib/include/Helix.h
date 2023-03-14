@@ -2,43 +2,46 @@
 #include "Point.h"
 #include "ICurve.h"
 
-/**
- * @brief Трёхмерная спираль
-*/
-class Helix :public ICurve
+namespace Cur3D
 {
-private:
-
-	/** Радиус спирали */
-	double radius = 1;
-
-	/** Шаг спирали по оси Z */
-	double step = 1;
-
-public:
-
-	Helix() = default;
-
 	/**
-	 * Основной конструктор для создания экземпляра класса
-	 * @param r радиус спирали
-	 * @param step шаг спирали
+	 * @brief Трёхмерная спираль
 	*/
-	Helix(double r, double step)
+	class Helix :public ICurve
 	{
-		setRadius(r);
-		setStep(step);
-	}
+	private:
 
-	double getRadius() const { return radius; }
+		/** Радиус спирали */
+		double radius = 1;
 
-	double getStep() const { return step; }
+		/** Шаг спирали по оси Z */
+		double step = 1;
 
-	void setRadius(double r);
+	public:
 
-	void setStep(double step);
+		Helix() = default;
 
-	Point getPoint(double t) const override;
+		/**
+		 * Основной конструктор для создания экземпляра класса
+		 * @param r радиус спирали
+		 * @param step шаг спирали
+		*/
+		Helix(double r, double step)
+		{
+			setRadius(r);
+			setStep(step);
+		}
 
-	Vector getDerivative(double t) const override;
-};
+		double getRadius() const { return radius; }
+
+		double getStep() const { return step; }
+
+		void setRadius(double r);
+
+		void setStep(double step);
+
+		Point getPoint(double t) const override;
+
+		Vector getDerivative(double t) const override;
+	};
+}

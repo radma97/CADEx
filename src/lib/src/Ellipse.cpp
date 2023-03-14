@@ -2,6 +2,8 @@
 #include <stdexcept>
 #include "Ellipse.h"
 
+using namespace Cur3D;
+
 void Ellipse::setRadiusX(double a)
 {
 	if (a <= 0)

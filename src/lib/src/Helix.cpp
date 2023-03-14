@@ -2,6 +2,8 @@
 #include <stdexcept>
 #include "Helix.h"
 
+using namespace Cur3D;
+
 void Helix::setRadius(double r)
 {
 	if (r <= 0)

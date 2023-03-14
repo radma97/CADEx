@@ -2,6 +2,8 @@
 #include <stdexcept>
 #include "Circle.h"
 
+using namespace Cur3D;
+
 void Circle::setRadius(double r)
 {
 	/* если радиус неположительный, то имеет место исключительная ситуация,

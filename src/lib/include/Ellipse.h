@@ -2,43 +2,46 @@
 #include "Point.h"
 #include "ICurve.h"
 
-/**
- * @brief Эллипс в плоскости XoY
-*/
-class Ellipse :public ICurve
+namespace Cur3D
 {
-private:
-
-	/** X-полуось эллипса */
-	double radiusX = 1;
-
-	/** Y-полуось эллипса */
-	double radiusY = 1;
-
-public:
-
-	Ellipse() = default;
-
 	/**
-	 * Основной конструктор для создания экземпляра класса
-	 * @param a X-полуось эллипса
-	 * @param b Y-полуось эллипса
+	 * @brief Эллипс в плоскости XoY
 	*/
-	Ellipse(double a, double b)
+	class Ellipse :public ICurve
 	{
-		setRadiusX(a);
-		setRadiusY(b);
-	}
+	private:
 
-	double getRadiusX() const { return radiusX; }
+		/** X-полуось эллипса */
+		double radiusX = 1;
 
-	double getRadiusY() const { return radiusY; }
+		/** Y-полуось эллипса */
+		double radiusY = 1;
 
-	void setRadiusX(double a);
+	public:
 
-	void setRadiusY(double b);
+		Ellipse() = default;
 
-	Point getPoint(double t) const override;
+		/**
+		 * Основной конструктор для создания экземпляра класса
+		 * @param a X-полуось эллипса
+		 * @param b Y-полуось эллипса
+		*/
+		Ellipse(double a, double b)
+		{
+			setRadiusX(a);
+			setRadiusY(b);
+		}
 
-	Vector getDerivative(double t) const override;
-};
+		double getRadiusX() const { return radiusX; }
+
+		double getRadiusY() const { return radiusY; }
+
+		void setRadiusX(double a);
+
+		void setRadiusY(double b);
+
+		Point getPoint(double t) const override;
+
+		Vector getDerivative(double t) const override;
+	};
+}

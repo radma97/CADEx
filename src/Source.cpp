@@ -13,6 +13,7 @@
 #include "Helix.h"
 
 using namespace std;
+using namespace Cur3D;
 
 /** Возвращает случайное положительное число, не большее 100 */
 inline double getRandomPositive()
