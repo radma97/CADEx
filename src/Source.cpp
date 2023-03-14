@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include <cmath>
 #include <memory>
+#include <algorithm>
 #include "Point.h"
 #include "ICurve.h"
 #include "Circle.h"
@@ -34,9 +35,10 @@ shared_ptr<ICurve> generateRandomObject()
 
 int main()
 {
-	srand(0);
+	srand(0); // time(0)
 
 	int numberOfCurves = 10;
+
 	vector<shared_ptr<ICurve>> curves(numberOfCurves);
 	for (auto& elem : curves)
 	{
@@ -58,6 +60,11 @@ int main()
 			circles.push_back(move(p));
 		}
 	}
+
+	/** сортировка окружностей по радиусу */
+	sort(circles.begin(), circles.end(), [](const auto& p1, const auto& p2) {
+		return p1->getRadius() < p2->getRadius();
+	});
 
 
 
