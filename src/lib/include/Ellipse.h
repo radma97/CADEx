@@ -14,7 +14,7 @@ private:
 
 	/** Y-полуось эллипса */
 	double radiusY = 1;
-	
+
 public:
 
 	Ellipse() = default;

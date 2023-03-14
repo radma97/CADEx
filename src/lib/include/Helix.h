@@ -14,7 +14,7 @@ private:
 
 	/** Шаг спирали по оси Z */
 	double step = 1;
-	
+
 public:
 
 	Helix() = default;

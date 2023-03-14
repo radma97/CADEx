@@ -11,7 +11,7 @@ private:
 
 	/** Радиус круга */
 	double radius = 1;
-	
+
 public:
 
 	Circle() = default;

@@ -4,6 +4,7 @@
 #include <cmath>
 #include <memory>
 #include <algorithm>
+#include <ctime>
 #include <omp.h>
 #include "Point.h"
 #include "ICurve.h"
@@ -21,7 +22,7 @@ inline double getRandomPositive()
 
 shared_ptr<ICurve> generateRandomObject()
 {
-	switch (rand()%3)
+	switch (rand() % 3)
 	{
 	case 0:
 		return make_shared<Circle>(getRandomPositive());
@@ -36,7 +37,7 @@ shared_ptr<ICurve> generateRandomObject()
 
 int main()
 {
-	srand(0); // time(0)
+	srand(time(0));
 
 	int numberOfCurves = 10;
 
@@ -65,11 +66,11 @@ int main()
 	/** сортировка окружностей по радиусу */
 	sort(circles.begin(), circles.end(), [](const auto& p1, const auto& p2) {
 		return p1->getRadius() < p2->getRadius();
-	});
+		});
 
 	double sumOfRadii = 0;
 
-	#pragma omp parallel for reduction(+:sumOfRadii)
+#pragma omp parallel for reduction(+:sumOfRadii)
 	for (int i = 0; i < (int)circles.size(); ++i)
 	{
 		sumOfRadii += circles[i]->getRadius();
