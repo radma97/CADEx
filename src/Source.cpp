@@ -2,6 +2,7 @@
 #include <vector>
 #include <cstdlib>
 #include <cmath>
+#include <memory>
 #include "Point.h"
 #include "ICurve.h"
 #include "Circle.h"
@@ -21,13 +22,13 @@ shared_ptr<ICurve> generateRandomObject()
 	switch (rand()%3)
 	{
 	case 0:
-		return shared_ptr<Circle>(new Circle(getRandomPositive()));
+		return make_shared<Circle>(getRandomPositive());
 
 	case 1:
-		return shared_ptr<Ellipse>(new Ellipse(getRandomPositive(), getRandomPositive()));
+		return make_shared<Ellipse>(getRandomPositive(), getRandomPositive());
 
 	default:
-		return shared_ptr<Helix>(new Helix(getRandomPositive(), getRandomPositive()));
+		return make_shared<Helix>(getRandomPositive(), getRandomPositive());
 	}
 }
 
@@ -42,11 +43,23 @@ int main()
 		elem = generateRandomObject();
 	}
 
+	cout << "Coordinates of point and derivative of curves in first container:" << endl;
 	for (const auto& elem : curves)
 	{
-		cout << (*elem).getPoint(acos(-1.) / 4) << ", " << (*elem).getDerivative(acos(-1.) / 4) << endl;
+		cout << (*elem).getPoint(acos(-1.) / 4) << '\t' << (*elem).getDerivative(acos(-1.) / 4) << endl;
 	}
 	cout << endl;
+
+	vector<shared_ptr<Circle>> circles;
+	for (auto& elem : curves)
+	{
+		if (auto p = dynamic_pointer_cast<Circle>(elem))
+		{
+			circles.push_back(move(p));
+		}
+	}
+
+
 
 	return 0;
 }
