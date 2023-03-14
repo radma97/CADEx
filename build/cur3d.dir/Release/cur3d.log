@@ -1,0 +1,8 @@
+﻿  Building Custom Rule C:/Users/radma/Documents/Visual Studio 2022/Projects/CADEx/CMakeLists.txt
+  Circle.cpp
+  Ellipse.cpp
+  Helix.cpp
+  Создание кода...
+  Auto build dll exports
+     Создается библиотека C:/Users/radma/Documents/Visual Studio 2022/Projects/CADEx/build/Release/cur3d.lib и объект C:/Users/radma/Documents/Visual Studio 2022/Projects/CADEx/build/Release/cur3d.exp
+  cur3d.vcxproj -> C:\Users\radma\Documents\Visual Studio 2022\Projects\CADEx\build\Release\cur3d.dll

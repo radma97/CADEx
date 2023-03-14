@@ -1,0 +1,4 @@
+C:/Users/radma/Documents/Visual Studio 2022/Projects/CADEx/build/CMakeFiles/test_task.dir
+C:/Users/radma/Documents/Visual Studio 2022/Projects/CADEx/build/CMakeFiles/cur3d.dir
+C:/Users/radma/Documents/Visual Studio 2022/Projects/CADEx/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/radma/Documents/Visual Studio 2022/Projects/CADEx/build/CMakeFiles/ZERO_CHECK.dir

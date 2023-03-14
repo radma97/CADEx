@@ -1,0 +1,20 @@
+EXPORTS 
+	??_R0?AVexception@std@@@8 	 DATA
+	??_R0?AVruntime_error@std@@@8 	 DATA
+	??0exception@std@@QEAA@AEBV01@@Z
+	??0runtime_error@std@@QEAA@AEBV01@@Z
+	??0runtime_error@std@@QEAA@PEBD@Z
+	??1exception@std@@UEAA@XZ
+	??1runtime_error@std@@UEAA@XZ
+	?getDerivative@Circle@Cur3D@@UEBA?AUVector@2@N@Z
+	?getDerivative@Ellipse@Cur3D@@UEBA?AUVector@2@N@Z
+	?getDerivative@Helix@Cur3D@@UEBA?AUVector@2@N@Z
+	?getPoint@Circle@Cur3D@@UEBA?AUPoint@2@N@Z
+	?getPoint@Ellipse@Cur3D@@UEBA?AUPoint@2@N@Z
+	?getPoint@Helix@Cur3D@@UEBA?AUPoint@2@N@Z
+	?setRadius@Circle@Cur3D@@QEAAXN@Z
+	?setRadius@Helix@Cur3D@@QEAAXN@Z
+	?setRadiusX@Ellipse@Cur3D@@QEAAXN@Z
+	?setRadiusY@Ellipse@Cur3D@@QEAAXN@Z
+	?setStep@Helix@Cur3D@@QEAAXN@Z
+	?what@exception@std@@UEBAPEBDXZ

@@ -1,0 +1,3 @@
+C:/Users/radma/Documents/Visual Studio 2022/Projects/CADEx/build/cur3d.dir/Release/Circle.obj
+C:/Users/radma/Documents/Visual Studio 2022/Projects/CADEx/build/cur3d.dir/Release/Ellipse.obj
+C:/Users/radma/Documents/Visual Studio 2022/Projects/CADEx/build/cur3d.dir/Release/Helix.obj

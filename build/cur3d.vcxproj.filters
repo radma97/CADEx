@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\radma\Documents\Visual Studio 2022\Projects\CADEx\src\lib\src\Circle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\radma\Documents\Visual Studio 2022\Projects\CADEx\src\lib\src\Ellipse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\radma\Documents\Visual Studio 2022\Projects\CADEx\src\lib\src\Helix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\radma\Documents\Visual Studio 2022\Projects\CADEx\src\lib\include\Circle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\radma\Documents\Visual Studio 2022\Projects\CADEx\src\lib\include\Ellipse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\radma\Documents\Visual Studio 2022\Projects\CADEx\src\lib\include\Helix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\radma\Documents\Visual Studio 2022\Projects\CADEx\src\lib\include\ICurve.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\radma\Documents\Visual Studio 2022\Projects\CADEx\src\lib\include\Point.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\radma\Documents\Visual Studio 2022\Projects\CADEx\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{87F3F03A-D1C2-33A6-9515-E35DC21253D1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{29F2FFF6-0863-39E2-9FBB-7127091A60A4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

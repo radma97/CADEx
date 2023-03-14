@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\radma\Documents\Visual Studio 2022\Projects\CADEx\build\CMakeFiles\41027c9f27c94068f66f916517849a21\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{7B250518-5DE4-35A7-B420-496C3513A70D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
