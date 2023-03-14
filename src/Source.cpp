@@ -4,6 +4,7 @@
 #include <cmath>
 #include <memory>
 #include <algorithm>
+#include <omp.h>
 #include "Point.h"
 #include "ICurve.h"
 #include "Circle.h"
@@ -67,12 +68,13 @@ int main()
 	});
 
 	double sumOfRadii = 0;
-	for (const auto& circle : circles)
+
+	#pragma omp parallel for reduction(+:sumOfRadii)
+	for (int i = 0; i < (int)circles.size(); ++i)
 	{
-		sumOfRadii += circle->getRadius();
+		sumOfRadii += circles[i]->getRadius();
 	}
 	cout << "The sum of the radii of the second container elements = " << sumOfRadii << endl;
-
 
 	return 0;
 }
